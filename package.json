@@ -4,8 +4,8 @@
   "description": "Practice for react.",
   "main": "index.js",
   "repository": {
-  "type": "git",
-  "url": "git://github.com/keikiller/repository.git"
+    "type": "git",
+    "url": "git://github.com/keikiller/repository.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,9 +20,11 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^13.3.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2"
   }
 }
