@@ -24,7 +24,7 @@ var toggleTodo = exports.toggleTodo = function toggleTodo(id) {
 };
 
 //Filter Todo
-var setVisibilityFilter = exports.setVisibilityFilter = function setVisibilityFilter(filer) {
+var setVisibilityFilter = exports.setVisibilityFilter = function setVisibilityFilter(filter) {
   return {
     type: 'SET_VISIBILITY_FILTER',
     filter: filter
@@ -64,8 +64,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = function (_React$component) {
-  _inherits(App, _React$component);
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
 
   function App() {
     _classCallCheck(this, App);
@@ -87,7 +87,7 @@ var App = function (_React$component) {
   }]);
 
   return App;
-}(_react2.default.component);
+}(_react2.default.Component);
 
 exports.default = App;
 
@@ -526,13 +526,15 @@ var _redux = require('redux');
 
 var _reducers = require('./reducers');
 
+var _reducers2 = _interopRequireDefault(_reducers);
+
 var _App = require('./components/App');
 
 var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var store = (0, _redux.createStore)(_reducers.todoApp);
+var store = (0, _redux.createStore)(_reducers2.default);
 
 (0, _reactDom.render)(_react2.default.createElement(
   _reactRedux.Provider,
